@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Client Heartbeat C# API Example</h2>
+
+<p>This is a sample of how to retrieve pulses.</p>
+
+
+@if (ViewBag.Pulses != null) {
+<table>
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Created At</td>
+            <td>Closed At</td>
+            <td>Code</td>
+            <td>Overall</td>
+            <td>Question 1</td>
+            <td>Question 2</td>
+            <td>Question 3</td>
+            <td>Question 4</td>
+        </tr>
+    </thead>
+    @foreach (var pulse in ViewBag.Pulses)
+    {
+        <tr>
+            <td>@pulse.Id</td>
+            <td>@pulse.CreatedAt</td>
+            <td>@pulse.ClosedAt</td>
+            <td>@pulse.Code</td>
+            <td>@pulse.Overall</td>
+            <td>@pulse.Question1</td>
+            <td>@pulse.Question2</td>
+            <td>@pulse.Question3</td>
+            <td>@pulse.Question4</td>
+        </tr>
+
+
+    }
+
+</table>
+    
+}
